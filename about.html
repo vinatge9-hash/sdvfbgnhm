@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Niyantri Coffee</title>
+  <meta name="description" content="Learn the story behind Niyantri Coffee and our warm, chocolate-infused approach to coffee in Hyderabad." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="opacity-0 transition-all duration-700 ease-in-out">
+  <!-- Header / Nav -->
+  <header class="bg-amber-900 text-white">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <div class="flex items-center gap-2">
+        <span class="h-8 w-8 rounded-full bg-amber-400" aria-label="logo"></span>
+        <span class="font-bold text-xl tracking-wide">Niyantri Coffee</span>
+      </div>
+      <input id="menu" type="checkbox" class="peer sr-only" />
+      <label for="menu" class="md:hidden cursor-pointer text-2xl p-2 rounded hover:bg-amber-700 transition-all duration-300" aria-label="Open menu">☰</label>
+      <nav class="hidden md:flex space-x-6" aria-label="Desktop Navigation">
+        <a href="index.html" class="hover:brightness-110 transition-all duration-300">Home</a>
+        <a href="about.html" class="hover:brightness-110 transition-all duration-300">About</a>
+        <a href="contact.html" class="hover:brightness-110 transition-all duration-300">Contact</a>
+      </nav>
+      <nav class="md:hidden absolute top-full left-0 w-full bg-amber-800 rounded-b-lg hidden peer-checked:block" aria-label="Mobile Menu">
+        <ul class="flex flex-col p-4 space-y-3">
+          <li><a href="index.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">Home</a></li>
+          <li><a href="about.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-screen">
+      <div class="absolute inset-0">
+        <img src="https://images.pexels.com/photos/1272328/pexels-photo-1272328.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Cozy chocolate-inspired cafe interior" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <div class="text-center px-4 max-w-2xl text-gray-100">
+          <h1 class="text-4xl md:text-5xl font-extrabold">About Niyantri Coffee</h1>
+          <p class="mt-4 text-lg">We craft warm, chocolate-infused coffees with a focus on calm, connection, and mindful sipping. Nestled in Hyderabad, we invite you to slow down and enjoy the moment.</p>
+          <img src="https://pixabay.com/get/g057af308cf44afef9cfc15f808a1c252e898c49bf9930281831b2c3f3df29d2947b82662b66aabe81c6ca9e5479a818f_640.jpg" alt="Interior view of Niyantri Coffee" class="w-full max-w-2xl mx-auto rounded-lg shadow mt-6" />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white" aria-label="Our Philosophy">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-4">Our Philosophy</h2>
+        <p class="mb-4 text-gray-700">Niyantri Coffee blends chocolate notes with ethically sourced coffee to create a comforting, memorable experience. We believe in slowing down, savoring details, and sharing warmth with our community.</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Chocolate-forward flavor balance that never overpowers the coffee</li>
+          <li>Cozy, human-centered spaces designed for conversation</li>
+          <li>Locally sourced ingredients and sustainable practices</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-100 py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-semibold text-lg">Niyantri Coffee</h4>
+        <p class="text-sm text-gray-400 mt-2">Hyderabad, Telangana, India</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Quick Links</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline transition-all duration-300">Home</a></li>
+          <li><a href="about.html" class="hover:underline transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:underline transition-all duration-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Newsletter</h5>
+        <form class="flex flex-col gap-2" action="#" method="post" aria-label="Newsletter">
+          <input type="email" placeholder="Email address" required class="px-4 py-2 rounded bg-white text-gray-800" />
+          <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded transition-all duration-300 hover:scale-105">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-gray-700" />
+    <p class="text-center text-sm py-3">© 2025 Niyantri Coffee, Hyderabad, Telangana, India</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0','translate-y-6');
+          entry.target.classList.add('opacity-100','translate-y-0');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(sec => {
+      if (!sec.classList.contains('opacity-0')) {
+        sec.classList.add('opacity-0');
+        sec.classList.add('translate-y-6');
+      }
+      observer.observe(sec);
+    });
+
+    window.addEventListener('load', () => {
+      document.body.classList.add('opacity-100');
+    });
+  </script>
+</body>
+</html>
