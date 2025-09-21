@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Niyantri Coffee</title>
+  <meta name="description" content="Get in touch with Niyantri Coffee in Hyderabad to share feedback or plan a chocolate-inspired coffee moment." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="opacity-0 transition-all duration-700 ease-in-out">
+  <!-- Header / Nav -->
+  <header class="bg-amber-900 text-white">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <div class="flex items-center gap-2">
+        <span class="h-8 w-8 rounded-full bg-amber-400" aria-label="logo"></span>
+        <span class="font-bold text-xl tracking-wide">Niyantri Coffee</span>
+      </div>
+      <input id="menu" type="checkbox" class="peer sr-only" />
+      <label for="menu" class="md:hidden cursor-pointer text-2xl p-2 rounded hover:bg-amber-700 transition-all duration-300" aria-label="Open menu">☰</label>
+      <nav class="hidden md:flex space-x-6" aria-label="Desktop Navigation">
+        <a href="index.html" class="hover:brightness-110 transition-all duration-300">Home</a>
+        <a href="about.html" class="hover:brightness-110 transition-all duration-300">About</a>
+        <a href="contact.html" class="hover:brightness-110 transition-all duration-300">Contact</a>
+      </nav>
+      <nav class="md:hidden absolute top-full left-0 w-full bg-amber-800 rounded-b-lg hidden peer-checked:block" aria-label="Mobile Menu">
+        <ul class="flex flex-col p-4 space-y-3">
+          <li><a href="index.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">Home</a></li>
+          <li><a href="about.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="block p-2 rounded hover:bg-amber-700 transition-all duration-300">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="bg-white/90 rounded-lg shadow-md p-6 max-w-2xl mx-auto">
+        <h1 class="text-3xl font-semibold mb-4">Contact Niyantri Coffee</h1>
+        <p class="mb-4">We’d love to hear from you. Send us a message and we’ll get back to you as soon as possible.</p>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4" action="#" method="post" aria-label="Contact form">
+          <input type="text" name="name" placeholder="Your name" required class="px-4 py-2 rounded border" />
+          <input type="email" name="email" placeholder="Email" required class="px-4 py-2 rounded border" />
+          <input type="tel" name="phone" placeholder="Phone (optional)" class="md:col-span-2 px-4 py-2 rounded border" />
+          <textarea name="message" placeholder="Your message" rows="5" required class="md:col-span-2 px-4 py-2 rounded border"></textarea>
+          <div class="md:col-span-2 text-right">
+            <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded transition-all duration-300 hover:scale-105">Send Message</button>
+          </div>
+        </form>
+        <p class="text-sm text-gray-600 mt-4">Hyderabad, Telangana, India</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-100 py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-semibold text-lg">Niyantri Coffee</h4>
+        <p class="text-sm text-gray-400 mt-2">Hyderabad, Telangana, India</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Quick Links</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline transition-all duration-300">Home</a></li>
+          <li><a href="about.html" class="hover:underline transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:underline transition-all duration-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Newsletter</h5>
+        <form class="flex flex-col gap-2" action="#" method="post" aria-label="Newsletter">
+          <input type="email" placeholder="Email address" required class="px-4 py-2 rounded bg-white text-gray-800" />
+          <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded transition-all duration-300 hover:scale-105">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-gray-700" />
+    <p class="text-center text-sm py-3">© 2025 Niyantri Coffee, Hyderabad, Telangana, India</p>
+  </footer>
+
+  <script>
+    // Simple reveal on load
+    window.addEventListener('load', () => document.body.classList.add('opacity-100'));
+  </script>
+</body>
+</html>
